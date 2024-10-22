@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reformat HTTP Headers</title>
+</head>
+<body>
+    <h1>Paste and Reformat HTTP Headers</h1>
+    <form method="POST" action="http://127.0.0.1:5000/">
+        <textarea name="headers" rows="10" cols="50" placeholder="Paste your raw headers here"></textarea><br>
+        <button type="submit">Reformat Headers</button>
+    </form>
+    {% if formatted_headers %}
+        <h2>Reformatted Headers</h2>
+        <textarea rows="10" cols="50">{{ formatted_headers }}</textarea>
+    {% endif %}
+</body>
+</html>
